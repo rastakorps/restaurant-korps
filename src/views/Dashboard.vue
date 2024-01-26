@@ -1,20 +1,15 @@
 <script setup>
-    import SideBar from '../components/SideBar.vue'
+    import { RouterView } from 'vue-router';
+    import SidebarMenu from '../components/SidebarMenu.vue'
 </script>
 
 <template>
     <v-card>
         <v-layout>
-            <SideBar/>
-            <v-main class="main-container">
-              <h1>Hola mundo</h1>
+            <SidebarMenu />
+            <v-main class="h-screen">
+                <RouterView />
             </v-main>
         </v-layout>
     </v-card>
 </template>
-
-<style scoped>
-    .main-container {
-        min-height: 100vh;
-    }
-</style>
