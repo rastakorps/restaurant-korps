@@ -1,10 +1,10 @@
 <script setup>
+import Dashboard from './views/Dashboard.vue';
 </script>
 
 <template>
-  <div>
-    <h1>Hello world!</h1>
-
-    <Button label="Submit"></Button>
-  </div>
+  <Dashboard />
 </template>
+
+<style scoped>
+</style>
