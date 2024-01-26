@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import DataTableActionButtons from '../../components/DataTableActionButtons.vue';
 
     const headersTable = ref([
         {title: 'Nombre', key: 'name'},
@@ -48,6 +49,10 @@ import { ref } from 'vue';
             price: 518,
           },
         ],);
+
+    const sayHello = () => {
+        console.log('say hello');
+    }
 </script>
 <template>
     <v-toolbar
@@ -65,6 +70,13 @@ import { ref } from 'vue';
 
             <template v-slot:[`item.price`]={item}>
                 $ {{ item.price }}
+            </template>
+
+            <template v-slot:[`item.actions`]={item}>
+                <DataTableActionButtons 
+                    :item="item"
+                    @edit="sayHello"
+                />
             </template>
         </v-data-table>
     </div>
