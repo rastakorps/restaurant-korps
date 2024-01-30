@@ -1,7 +1,7 @@
 <template>
     <v-row class="h-screen m-0">
         <v-col cols="12" sm="6" color="primary" class="bg-teal-lighten-1 h-screen d-flex flex-column align-center justify-center">
-            <h1>RESTAURANTE KORPS</h1>
+            <h1>RESTAURANTE</h1>
             <v-avatar image="https://randomuser.me/api/portraits/women/81.jpg" size="350"></v-avatar>
         </v-col>
 
@@ -19,7 +19,7 @@
                       <v-btn type="submit" color="primary">Ingresar</v-btn>
                     </v-col>
                     <v-col>
-                      <router-link to="/register">
+                      <router-link to="/register" class="no-underline">
                         <v-btn color="secondary">Regístrate</v-btn>
                       </router-link>
                     </v-col>
@@ -54,5 +54,9 @@ border-radius: 15px;
 
 .text-center {
 text-align: center;
+}
+
+.no-underline {
+    text-decoration: none !important;
 }
 </style>

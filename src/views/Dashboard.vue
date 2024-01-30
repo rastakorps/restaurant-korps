@@ -1,13 +1,13 @@
 <script setup>
     import { RouterView } from 'vue-router';
     import SidebarMenu from '../components/SidebarMenu.vue';
-    import { ref } from 'vue';
+    import { useAuthStore } from '../stores/auth'
 
-    const showMenu = ref(false);
+    const auth = useAuthStore()
 </script>
 
 <template>
-        <v-layout v-if="showMenu">
+        <v-layout v-if="auth.user">
             <SidebarMenu />
             <v-main class="h-screen">
                 <RouterView />

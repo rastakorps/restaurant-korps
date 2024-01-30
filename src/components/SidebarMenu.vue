@@ -22,7 +22,7 @@
             prepend-icon="mdi-invoice-list" 
             title="Ordenes" 
             value="orders"
-            to="/orders"
+            to="/"
         >
         </v-list-item>
 
