@@ -5,7 +5,7 @@ const router = createRouter({
     linkActiveClass: "active",
     routes: [
         {
-            path: '/orders',
+            path: '/',
             name: 'orders',
             component: () => import('../views/orders/OrdersIndex.vue')
         },
@@ -23,6 +23,16 @@ const router = createRouter({
             path: '/users',
             name: 'users',
             component: () => import('../views/users/UsersIndex.vue')
+        },
+        {
+            path: '/register',
+            name: 'register',
+            component: () => import('../views/Register.vue')
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: () => import('../views/Login.vue')
         }
     ]
 });
